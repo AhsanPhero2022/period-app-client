@@ -4,6 +4,8 @@ import Login from "../components/Register/Login";
 import Register from "../components/Register/Register";
 import UserDashboard from "../components/UserDashboard/UserDashboard";
 import Home from "../components/Home/Home";
+import UserProfile from "../components/UserDashboard/UserProfile";
+import DoctorProfile from "../components/UserDashboard/Features/Doctors/DoctorProfile";
 
 const router = createBrowserRouter([
   {
@@ -22,11 +24,23 @@ const router = createBrowserRouter([
         path: "register",
         element: <Register></Register>,
       },
+      
     ],
   },
   {
     path: "userDashboard",
     element: <UserDashboard></UserDashboard>,
+    children: [
+      {
+        path: "userProfile",
+        element: <UserProfile></UserProfile>,
+      },
+      
+      {
+        path: "doctorProfile",
+        element: <DoctorProfile></DoctorProfile>,
+      }
+    ],
   },
 ]);
 

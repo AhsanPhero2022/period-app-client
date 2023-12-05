@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import NavItem from "../Home/NavItem";
+
 import Footer from "../Home/Footer";
-import UserProfile from "./UserProfile";
+
+import DashboardNavbar from "./DashboardNavbar/DashboardNavbar";
 
 const UserDashboard = () => {
   return (
@@ -12,8 +13,8 @@ const UserDashboard = () => {
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col  ">
           {/* Page content here */}
-          <NavItem></NavItem>
-          <UserProfile></UserProfile>
+          <DashboardNavbar></DashboardNavbar>
+          
           <Outlet></Outlet>
           <Footer></Footer>
           <label
