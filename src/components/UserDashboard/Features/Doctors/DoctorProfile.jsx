@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { DotWave } from "@uiball/loaders";
-import DrProfileCard from "../DrProfileCard";
+import DrProfileCard from "./DrProfileCard";
 
 const DoctorProfile = () => {
   const [profile, setProfile] = useState([]);

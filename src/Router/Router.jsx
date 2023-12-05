@@ -6,6 +6,7 @@ import UserDashboard from "../components/UserDashboard/UserDashboard";
 import Home from "../components/Home/Home";
 import UserProfile from "../components/UserDashboard/UserProfile";
 import DoctorProfile from "../components/UserDashboard/Features/Doctors/DoctorProfile";
+import SeeDetails from "../components/UserDashboard/Features/Doctors/SeeDetails";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,12 @@ const router = createBrowserRouter([
       {
         path: "doctorProfile",
         element: <DoctorProfile></DoctorProfile>,
-      }
+      },
+      {
+        path: "seeDetails/:_id",
+        element: <SeeDetails></SeeDetails>,
+      },
+
     ],
   },
 ]);

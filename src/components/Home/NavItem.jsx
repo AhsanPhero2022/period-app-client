@@ -14,8 +14,8 @@ function NavItem() {
       
       <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ">
         <li><a>Home</a></li>
-        <li><a>Period Tracker</a></li>
-        <li><a>Consultancy</a></li>
+        <li><a>About Us</a></li>
+        <li><a>Blogs</a></li>
       </ul>
      
     </div>
@@ -27,8 +27,8 @@ function NavItem() {
   <div className="navbar-center hidden  md:hidden sm:hidden lg:block">
   <ul className="flex gap-5">
         <li><Link to='/'>Home</Link></li>
-        <li><a>Period Tracker</a></li>
-        <li><a>Consultancy</a></li>
+        <li><a>About Us</a></li>
+        <li><a>Blogs</a></li>
       </ul>
 
   </div>

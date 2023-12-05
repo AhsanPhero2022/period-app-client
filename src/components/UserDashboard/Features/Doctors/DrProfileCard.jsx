@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 const DrProfileCard = ({ doctor }) => {
   const { _id, name, image, specialist, rating, status } = doctor;
+  
   const backgroundColorClass =
     status === "online" ? "bg-green-500" : "bg-red-500";
   return (
@@ -24,7 +25,7 @@ const DrProfileCard = ({ doctor }) => {
           <p>Specialist: {specialist}</p>
           <p>Ratings: {rating}</p>
           <div className="card-actions justify-end">
-            <Link to={`/dashboard/seeDetails/${_id}`}>
+            <Link to={`/userDashboard/seeDetails/${_id}`}>
               <button className="btn btn-success">See Details</button>
             </Link>
           </div>
