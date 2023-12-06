@@ -45,6 +45,12 @@ const UserDashboard = () => {
                 Help Center
                 </Link>
             </li>
+            <li className="mt-3">
+              <Link to="">
+              <ion-icon name="bag-handle-outline"></ion-icon>
+                Shop
+                </Link>
+            </li>
           </ul>
         </div>
       </div>

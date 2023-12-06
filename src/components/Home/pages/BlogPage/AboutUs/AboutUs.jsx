@@ -9,7 +9,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="container mx-auto mt-8">
+    <div className=" container mx-auto mt-8">
       <h1 className="text-3xl font-bold mb-4">About Us</h1>
       <p className="mb-6">
         Welcome to our healthcare center! Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -18,11 +18,11 @@ const AboutUs = () => {
       </p>
 
       {/* Social Links */}
-      <div className="flex space-x-4 mb-8">
-        <a href="#" className="text-blue-500 hover:underline">
+      <div className=" tex flex space-x-4 mb-8">
+        <a href="#" className=" text-blue-500 hover:underline">
           Facebook
         </a>
-        <a href="#" className="text-blue-500 hover:underline">
+        <a href="#" className=" text-blue-500 hover:underline">
           Twitter
         </a>
         <a href="#" className="text-blue-500 hover:underline">
