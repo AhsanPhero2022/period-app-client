@@ -27,8 +27,8 @@ function NavItem() {
   <div className="navbar-center hidden  md:hidden sm:hidden lg:block">
   <ul className="flex gap-5">
         <li><Link to='/'>Home</Link></li>
-        <li><a>About Us</a></li>
-        <li><a>Blogs</a></li>
+        <li><Link to="/aboutUs">About Us</Link></li>
+        <li><Link to="/blog">Blogs</Link></li>
       </ul>
 
   </div>

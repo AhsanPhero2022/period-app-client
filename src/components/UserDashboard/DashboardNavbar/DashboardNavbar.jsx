@@ -42,13 +42,16 @@ function DashboardNavbar() {
                 isMenuOpen ? 'block' : 'hidden'
               } lg:flex lg:items-center lg:w-auto`}
             >
-              <div className="text-sm lg:flex-grow">
-                <a
-                  href="#"
+              <div className="text-sm  lg:flex-grow">
+                <Link to="userProfile" className="mr-4 text-white hover:text-gray-300">
+                  Home
+                </Link>
+                <Link
+                  to="periodTracker"
                   className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4"
                 >
                   Period Tracker
-                </a>
+                </Link>
                 <Link
                   to='doctorProfile'
                   className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4"
@@ -59,7 +62,7 @@ function DashboardNavbar() {
                   href="#"
                   className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500"
                 >
-                  Contact
+                  UpdateInformation
                 </a>
               </div>
             </div>
