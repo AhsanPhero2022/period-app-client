@@ -10,6 +10,7 @@ import SeeDetails from "../components/UserDashboard/Features/Doctors/SeeDetails"
 import PeriodTracker from "../components/UserDashboard/Features/PeriodTracker/PeriodTracker";
 import Blog from "../components/Home/pages/BlogPage/Blog";
 import AboutUs from "../components/Home/pages/BlogPage/AboutUs/AboutUs";
+import AppointmentDetails from "../components/UserDashboard/Features/Doctors/AppointmentDetails";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: 'periodTracker',
         element: <PeriodTracker></PeriodTracker>,
+      },
+      {
+        path: 'appointmentDetails/:_id',
+        element: <AppointmentDetails></AppointmentDetails>,
       }
     ],
   },
