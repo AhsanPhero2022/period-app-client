@@ -1,53 +1,96 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
-import Avatar from '@material-ui/core/Avatar';
-import EditIcon from '@material-ui/icons/Edit';
-import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
-import ListIcon from '@material-ui/icons/List';
-import LocalActivityIcon from '@material-ui/icons/LocalActivity';
-
+import React from "react";
+import Avatar from "@material-ui/core/Avatar";
 
 function UserProfile() {
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-200">
-    <div className="bg-white p-8 rounded-md shadow-md w-96">
-      <div className="flex justify-center mb-6">
-        <Avatar src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="User Avatar" />
+    <div className="grid my-8 gap-4 lg:grid-cols-3">
+      <div className=" w-[330px]  bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 rounded-lg ms-2">
+        <div className=" ">
+          <Avatar
+            className="mx-auto mt-4"
+            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="User Avatar"
+          />
+          <h2 className="text-center text-2xl font-semibold">Dr. Navila</h2>
+          <p className="text-center">Javeri</p>
+          <div className="flex justify-between px-4">
+            <div className="">
+              <p>DOB</p>
+              <p>08/5/2023</p>
+              <div>
+                <p>Age</p>
+                <p>22 y. 4m</p>
+              </div>
+            </div>
+
+            <div>
+              <p>height</p>
+              <p>168 inch</p>
+              <div>
+                <p>Wight</p>
+                <p>5'9</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Profile button */}
+        <div className="mt-20 mx-6">
+          <button className="btn bg-gradient-to-l from-slate-500 to-slate-200 text-slate-600 border border-slate-400 w-full px-12">
+            send message
+          </button>
+        </div>
       </div>
-      <div className="text-center mb-6">
-        <h2 className="text-xl font-bold">John Doe</h2>
-        <p className="text-gray-500">Web Developer</p>
+      <div className="ms-24 ps-5 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 rounded-lg">
+        <div className="mt-3">
+          <h2>Home Address</h2>
+          <p>123 Broadway </p>
+        </div>
+        <div className="mt-3">
+          <h2>Home Address</h2>
+          <p>123 Broadway </p>
+        </div>
+        <div className="mt-3">
+          <h2>Home Address</h2>
+          <p>123 Broadway </p>
+        </div>
+        <div className="mt-3">
+          <h2>Home Address</h2>
+          <p>123 Broadway </p>
+        </div>
+        <div className="mt-3">
+          <h2>Home Address</h2>
+          <p>123 Broadway </p>
+        </div>
       </div>
-      <div className="flex justify-between mb-6">
-        <button className="flex items-center bg-blue-500 text-white px-4 py-2 rounded-md">
-          <EditIcon className="mr-2" />
-          Edit Profile
-        </button>
-        <button className="flex items-center bg-green-500 text-white px-4 py-2 rounded-md">
-          <CalendarTodayIcon className="mr-2" />
-          View Calendar
-        </button>
-      </div>
-      <div className="text-center">
-        <h3 className="text-lg font-semibold mb-2">Daily Activities</h3>
-        <ul className="text-gray-600">
-          <li className="flex items-center mb-2">
-            <ListIcon className="mr-2" />
-            Meeting with the team
-          </li>
-          <li className="flex items-center mb-2">
-            <LocalActivityIcon className="mr-2" />
-            Code review at 2:00 PM
-          </li>
-          <li className="flex items-center">
-            <LocalActivityIcon className="mr-2" />
-            Daily standup at 10:00 AM
-          </li>
-        </ul>
+      <div className="flex flex-col justify-center items-center gap-3">
+        <div className="">
+          <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
+            <div class="col-span-2 text-lg font-bold capitalize rounded-md">
+              Hello world
+            </div>
+            <div class="col-span-2 rounded-md">
+              Using Lorem ipsum to focus attention on graphic elements in a
+              webpage design
+            </div>
+          </div>
+        </div>
+        <div className="">
+          <div className=" ">
+            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
+              <div class="col-span-2 text-lg font-bold capitalize rounded-md">
+                Hello world
+              </div>
+              <div class="col-span-2 rounded-md">
+                Using Lorem ipsum to focus attention on graphic elements in a
+                webpage design
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  )
+  );
 }
 
-export default UserProfile
+export default UserProfile;

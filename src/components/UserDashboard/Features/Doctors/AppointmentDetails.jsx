@@ -85,17 +85,17 @@ function AppointmentDetails() {
             <div className="container mx-8 mt-8">
               <h2 className="text-2xl font-bold mb-4">Payment Options</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {/* Card Payment */}
+              
                 <div className="bg-white p-4 rounded-md shadow-md flex flex-col items-center">
                   <img
-                    src="card-icon.png" // Replace with the actual path or URL for your card icon
+                    src="card-icon.png"
                     alt="Card Icon"
                     className="h-12 mb-2"
                   />
                   <p className="text-sm">Card Payment</p>
                 </div>
 
-                {/* bKash Payment */}
+                
                 <div className="bg-white p-4 rounded-md shadow-md flex flex-col items-center">
                   <img
                     src="https://www.logo.wine/a/logo/BKash/BKash-Icon-Logo.wine.svg"

@@ -52,8 +52,14 @@ const SeeDetails = () => {
                 </h2>
                 <p>University: {singleData.university}</p>
                 <p>achievement: {singleData.achievement}</p>
+                <div className="my-4">
+                  <h1><span className=" font-semibold">Experience :</span> 5 years</h1>
+                  <h1><span className=" font-semibold">Language :</span> English, 
+                  Bangla</h1>
+                  <h1><span className=" font-semibold">Type of :</span> Full time</h1>
+                </div>
                 <Link to={`/userDashboard/appointmentDetails/${singleData._id}`}>
-                <button className="btn btn-success mt-8">Appointment Now</button>
+                <button className="btn btn-success">Appointment Now</button>
                 </Link>
               </div>
               
