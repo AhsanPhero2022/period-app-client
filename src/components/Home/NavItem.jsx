@@ -1,8 +1,17 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/Provider";
 
 function NavItem() {
+  const {user, logOut} = useContext(AuthContext)
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .then((error) => console.log(error));
+  };
+
   return (
     <div>
       <div className="navbar bg-[#e34fe3] text-white">
@@ -39,6 +48,9 @@ function NavItem() {
               <li>
                 <a>Blogs</a>
               </li>
+              <li>
+                <a>Shop</a>
+              </li>
             </ul>
           </div>
           <div className="navbar-start">
@@ -56,6 +68,9 @@ function NavItem() {
             </li>
             <li>
               <Link to="/blog">Blogs</Link>
+            </li>
+            <li>
+              <Link to="/shop">Shop</Link>
             </li>
           </ul>
         </div>
@@ -95,7 +110,20 @@ function NavItem() {
               <span className="badge badge-xs badge-primary indicator-item"></span>
             </div>
           </button>
-          <Link to="/login">Login</Link>
+          {user?.email ? (
+            <button
+              onClick={handleLogOut}
+              className="  px-4 py-2 rounded hover:bg-green-500 mr-2"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link to="/login">
+              <button className="bg-green-300  px-4 py-2 rounded hover:bg-green-200 mr-2">
+                Login
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </div>

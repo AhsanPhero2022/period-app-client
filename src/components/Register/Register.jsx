@@ -9,21 +9,87 @@ import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/Provider";
+import { useNavigate } from "react-router-dom/dist/umd/react-router-dom.development";
+import Swal from "sweetalert2";
+import { updateProfile } from "firebase/auth";
 
 const defaultTheme = createTheme();
 
 export default function SignUp() {
+  const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+
+   const formData = new FormData(event.target);
+
+    
+    const name = formData.get("firstName") + " " + formData.get("lastName");
+    const email = formData.get("email");
+    const photo = formData.get("photo");
+    const password = formData.get("password");
+
+    console.log(name, email, photo, password);
+
+  
+    if (password.length < 6) {
+      Swal.fire({
+        title: "Try Again!",
+        text: "Password Must be 6 characters long",
+        icon: "warning",
+        imageWidth: 400,
+        imageHeight: 200,
+      });
+
+      return;
+    }
+
+    createUser(email, password)
+      .then((result) => {
+        const createdUser = result.user;
+        profileUpdate(name, photo, createdUser);
+        navigate("/");
+        if (createdUser) {
+          Swal.fire({
+            title: "Great!",
+            text: "Successfully Register",
+            icon: "success",
+            imageWidth: 400,
+            imageHeight: 200,
+          });
+        }
+      })
+      .catch((error) => {
+        if (error) {
+          Swal.fire({
+            title: "Try Again",
+            text: "Existing Gmail",
+            icon: "warning",
+            imageWidth: 400,
+            imageHeight: 200,
+          });
+        }
+      });
+  };
+
+  const profileUpdate = (name, photo, createdUser) => {
+    updateProfile(createdUser, {
+      displayName: name,
+      photoURL: photo,
+    })
+      .then((result) => {
+        const createdUser = result.user;
+        console.log(createdUser);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -48,12 +114,7 @@ export default function SignUp() {
             <Typography component="h1" variant="h5">
               Sign up
             </Typography>
-            <Box
-              component="form"
-              noValidate
-              onSubmit={handleSubmit}
-              sx={{ mt: 3 }}
-            >
+            <form onSubmit={handleSubmit}>
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
@@ -84,6 +145,16 @@ export default function SignUp() {
                     label="Email Address"
                     name="email"
                     autoComplete="email"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    id="photo"
+                    label="Photo URL"
+                    name="photo"
+                    autoComplete="photo"
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -121,7 +192,7 @@ export default function SignUp() {
                   </Link>
                 </Grid>
               </Grid>
-            </Box>
+            </form>
           </Box>
         </Container>
       </ThemeProvider>

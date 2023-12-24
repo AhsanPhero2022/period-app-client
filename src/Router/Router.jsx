@@ -11,6 +11,10 @@ import PeriodTracker from "../components/UserDashboard/Features/PeriodTracker/Pe
 import Blog from "../components/Home/pages/BlogPage/Blog";
 import AboutUs from "../components/Home/pages/BlogPage/AboutUs/AboutUs";
 import AppointmentDetails from "../components/UserDashboard/Features/Doctors/AppointmentDetails";
+import Shop from "../components/Shop/Shop";
+import PrivateRoute from "../route/PrivateRout";
+
+
 
 const router = createBrowserRouter([
   {
@@ -36,13 +40,19 @@ const router = createBrowserRouter([
       {
         path: "blog",
         element: <Blog></Blog>
-      }
+      },
+      {
+        path: "shop",
+        element: <Shop></Shop>
+      },
       
     ],
   },
   {
     path: "userDashboard",
-    element: <UserDashboard></UserDashboard>,
+    element: <PrivateRoute>
+      <UserDashboard></UserDashboard>
+    </PrivateRoute>,
     children: [
       {
         path: "userProfile",
