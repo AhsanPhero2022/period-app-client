@@ -2,13 +2,13 @@ import Swal from "sweetalert2";
 
 
 const ShopCard = ({ product }) => {
-  const { name, image, quantity, price, rating } = product;
+  const { name, quantity, price, rating } = product;
  
   const handleClink = () => {
     Swal.fire({
       position: "top-end",
       icon: "success",
-      title: "Your T-Shirt has been saved",
+      title: "Added to Card",
       showConfirmButton: false,
       timer: 1500,
     });
@@ -18,7 +18,7 @@ const ShopCard = ({ product }) => {
     <div>
       <div className="card card-compact w-96 bg-base-100 shadow-xl">
         <figure>
-          <img className="h-[300px]" src={image} alt="Shoes" />
+          <img className="h-[300px]" src={`https://picsum.photos/500/350?${Math.random()}`} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
