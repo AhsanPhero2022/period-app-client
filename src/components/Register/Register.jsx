@@ -37,7 +37,17 @@ export default function SignUp() {
 
     console.log(name, email, photo, password);
 
-  
+const userData = {
+  name,
+  email,
+  photo,
+  password
+}
+
+    
+
+
+
     if (password.length < 6) {
       Swal.fire({
         title: "Try Again!",

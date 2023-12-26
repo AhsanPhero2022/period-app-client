@@ -1,10 +1,30 @@
+import { useContext } from "react";
 import Swal from "sweetalert2";
-
+import { AuthContext } from "../../Provider/Provider";
 
 const ShopCard = ({ product }) => {
-  const { name, quantity, price, rating } = product;
- 
+  const { name, quantity, price, rating, image } = product;
+  const { user } = useContext(AuthContext);
+  const userEmail = user.email;
+
   const handleClink = () => {
+    const cardDetails = {
+      name,
+      quantity,
+      price,
+      rating,
+      image,
+      userEmail,
+    };
+
+    fetch("http://localhost:5000/cardDetails", {
+      method: "POSt",
+      headers: {
+        "content-Type": "application/json",
+      },
+      body: JSON.stringify(cardDetails),
+    });
+
     Swal.fire({
       position: "top-end",
       icon: "success",
@@ -18,7 +38,11 @@ const ShopCard = ({ product }) => {
     <div>
       <div className="card card-compact w-96 bg-base-100 shadow-xl">
         <figure>
-          <img className="h-[300px]" src={`https://picsum.photos/500/350?${Math.random()}`} alt="Shoes" />
+          <img
+            className="h-[300px]"
+            src={`https://picsum.photos/500/350?${Math.random()}`}
+            alt="Shoes"
+          />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>

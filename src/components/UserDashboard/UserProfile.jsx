@@ -1,8 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
 import Avatar from "@material-ui/core/Avatar";
 
+
 function UserProfile() {
+
+ 
   return (
     <div className="grid my-8 gap-4 lg:grid-cols-3">
       <div className=" w-[330px]  bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 rounded-lg ms-2">
