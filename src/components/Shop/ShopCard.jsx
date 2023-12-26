@@ -5,9 +5,10 @@ import { AuthContext } from "../../Provider/Provider";
 const ShopCard = ({ product }) => {
   const { name, quantity, price, rating, image } = product;
   const { user } = useContext(AuthContext);
-  const userEmail = user.email;
+  
 
   const handleClink = () => {
+    const userEmail = user.email;
     const cardDetails = {
       name,
       quantity,

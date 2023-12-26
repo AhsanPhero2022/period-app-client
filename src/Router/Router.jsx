@@ -13,6 +13,7 @@ import AboutUs from "../components/Home/pages/BlogPage/AboutUs/AboutUs";
 import AppointmentDetails from "../components/UserDashboard/Features/Doctors/AppointmentDetails";
 import Shop from "../components/Shop/Shop";
 import PrivateRoute from "../route/PrivateRout";
+import Cart from "../components/Shop/Cart";
 
 
 
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "shop",
         element: <Shop></Shop>
+      },
+      {
+        path: "cart",
+        element: <Cart></Cart>
       },
       
     ],
