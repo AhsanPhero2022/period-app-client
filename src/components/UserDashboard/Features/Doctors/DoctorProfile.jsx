@@ -8,7 +8,7 @@ const DoctorProfile = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://y-ahsanphero2022.vercel.app/user")
+    fetch("http://localhost:5000/doctors")
       .then((res) => res.json())
       .then((data) => {
         setProfile(data);

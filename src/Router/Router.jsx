@@ -14,6 +14,7 @@ import AppointmentDetails from "../components/UserDashboard/Features/Doctors/App
 import Shop from "../components/Shop/Shop";
 import PrivateRoute from "../route/PrivateRout";
 import Cart from "../components/Shop/Cart";
+import ProductDetails from "../components/Shop/ProductDetails";
 
 
 
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
       {
         path: "cart",
         element: <Cart></Cart>
+      },
+      
+      {
+        path: "productDetails/:_id",
+        element: <ProductDetails></ProductDetails>
       },
       
     ],

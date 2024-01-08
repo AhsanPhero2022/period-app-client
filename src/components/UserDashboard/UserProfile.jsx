@@ -1,123 +1,122 @@
-import React from "react";
-import {
-  // ... other imports
+/* eslint-disable no-unused-vars */
+import React, { useContext } from "react";
+import Avatar from "@material-ui/core/Avatar";
+import Calendar from "../../calendar/Calendar";
 
-  // Import Tailwind CSS classes for styling
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
-  MDBCardImage,
-  MDBCardText,
-  MDBBtn,
-  MDBBreadcrumb,
-  MDBBreadcrumbItem,
-  MDBProgress,
-  MDBProgressBar,
-  MDBIcon,
-  MDBListGroup,
-  MDBListGroupItem,
-} from "mdb-react-ui-kit";
 
-export default function UserProfile() {
+function UserProfile() {
+
+ 
   return (
-    <section className="bg-gray-200">
-      <MDBContainer className="py-5">
-        <MDBRow>
-          <MDBCol>
-            <MDBBreadcrumb className="bg-white rounded-3 p-3 mb-4">
-              <MDBBreadcrumbItem>
-                <a href="#" className="text-blue-500">Home</a>
-              </MDBBreadcrumbItem>
-              <MDBBreadcrumbItem>
-                <a href="#" className="text-blue-500">User</a>
-              </MDBBreadcrumbItem>
-              <MDBBreadcrumbItem active>User Profile</MDBBreadcrumbItem>
-            </MDBBreadcrumb>
-          </MDBCol>
-        </MDBRow>
+    <div className="grid my-8 gap-4 lg:grid-cols-3">
+      <div className=" w-[330px]  bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 rounded-lg ms-2">
+        <div className=" ">
+          <Avatar
+            className="mx-auto mt-4"
+            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="User Avatar"
+          />
+          <h2 className="text-center text-2xl font-semibold">Dr. Navila</h2>
+          <p className="text-center">Javeri</p>
+          <div className="flex justify-between px-4">
+            <div className="">
+              <p>DOB</p>
+              <p>08/5/2023</p>
+              <div>
+                <p>Age</p>
+                <p>22 y. 4m</p>
+              </div>
+            </div>
 
-        <MDBRow>
-          <MDBCol lg="4">
-            <MDBCard className="mb-4">
-              <MDBCardBody className="text-center">
-                <MDBCardImage
-                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
-                  alt="avatar"
-                  className="rounded-circle w-40"
-                />
-                <p className="text-gray-500 mb-1">Full Stack Developer</p>
-                <p className="text-gray-500 mb-4">Bay Area, San Francisco, CA</p>
-                <div className="flex justify-center mb-2">
-                  <MDBBtn className="bg-blue-500 text-white">Follow</MDBBtn>
-                  <MDBBtn outline className="ms-1">Message</MDBBtn>
-                </div>
-              </MDBCardBody>
-            </MDBCard>
-
-            {/* ... other cards */}
-          </MDBCol>
-          <MDBCol lg="8">
-            <MDBCard className="mb-4">
-              <MDBCardBody>
-                {/* ... other card content */}
-
-                <MDBRow>
-                  <MDBCol sm="3">
-                    <MDBCardText>Full Name</MDBCardText>
-                  </MDBCol>
-                  <MDBCol sm="9">
-                    <MDBCardText className="text-gray-500">Johnatan Smith</MDBCardText>
-                  </MDBCol>
-                </MDBRow>
-                {/* ... other rows with similar structure */}
-              </MDBCardBody>
-            </MDBCard>
-
-            <MDBRow>
-              <MDBCol md="6">
-                <MDBCard className="mb-4 mb-md-0">
-                  <MDBCardBody>
-                    {/* ... other card content */}
-
-                    <MDBCardText className="mb-4">
-                      <span className="text-blue-500 italic me-1">assignment</span>
-                      Project Status
-                    </MDBCardText>
-                    <MDBCardText className="mb-1 text-sm">Web Design</MDBCardText>
-                    <MDBProgress className="rounded">
-                      <MDBProgressBar className="bg-blue-500" width={80} />
-                    </MDBProgress>
-                    <MDBProgress className="rounded">
-                      <MDBProgressBar className="bg-blue-500" width={80} />
-                    </MDBProgress>
-                    <MDBProgress className="rounded">
-                      <MDBProgressBar className="bg-blue-500" width={80} />
-                    </MDBProgress>
-
-                    {/* ... other progress bars */}
-                  </MDBCardBody>
-                </MDBCard>
-              </MDBCol>
-
-              <MDBCol md="6">
-                <MDBCard className="mb-4 mb-md-0">
-                  <MDBCardBody>
-                    {/* ... other card content */}
-
-                    <MDBCardText className="mb-4">
-                      <span className="text-blue-500 italic me-1">assignment</span>
-                      Project Status
-                    </MDBCardText>
-                    {/* ... other card content */}
-                  </MDBCardBody>
-                </MDBCard>
-              </MDBCol>
-            </MDBRow>
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer>
-    </section>
+            <div>
+              <p>height</p>
+              <p>168 inch</p>
+              <div>
+                <p>Wight</p>
+                <p>5'9</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Profile button */}
+        <div className="mt-20 mx-6">
+          <button className="btn bg-gradient-to-l from-slate-500 to-slate-200 text-slate-600 border border-slate-400 w-full px-12">
+            send message
+          </button>
+        </div>
+      </div>
+      <div className="ms-24 ps-5 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 rounded-lg">
+        <div className="mt-3">
+          <h2>Home Address</h2>
+          <p>123 Broadway </p>
+        </div>
+        <div className="mt-3">
+          <h2>Home Address</h2>
+          <p>123 Broadway </p>
+        </div>
+        <div className="mt-3">
+          <h2>Home Address</h2>
+          <p>123 Broadway </p>
+        </div>
+        <div className="mt-3">
+          <h2>Home Address</h2>
+          <p>123 Broadway </p>
+        </div>
+        <div className="mt-3">
+          <h2>Home Address</h2>
+          <p>123 Broadway </p>
+        </div>
+      </div>
+      <div className="flex flex-col justify-center items-center gap-3">
+        <div className="">
+          <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
+            <div class="col-span-2 text-lg font-bold capitalize rounded-md">
+              Hello world
+            </div>
+            <div class="col-span-2 rounded-md">
+              Using Lorem ipsum to focus attention on graphic elements in a
+              webpage design
+            </div>
+          </div>
+        </div>
+        <div className="">
+          <div className=" ">
+            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
+              <div class="col-span-2 text-lg font-bold capitalize rounded-md">
+                Hello world
+              </div>
+              <div class="col-span-2 rounded-md">
+                Using Lorem ipsum to focus attention on graphic elements in a
+                webpage design
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* text area */}
+      
+     {/* Open the modal using document.getElementById('ID').showModal() method */}
+<button className="btn btn-success" onClick={()=>document.getElementById('my_modal_5').showModal()}>Add Note</button>
+<dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+  <div className="modal-box">
+    <h3 className="font-bold text-lg">Hello!</h3>
+    <p className="py-4">Press ESC key or click the button below to close</p>
+    <div className="my-2">
+    <input type="text" placeholder="Title" className="input input-bordered input-success  max-w-xs" />
+     <Calendar></Calendar>
+    </div>
+    <textarea className="textarea textarea-success w-full" placeholder="Add Your Daily Note"></textarea>
+    <div className="modal-action">
+      <form method="dialog">
+      
+        <button className="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+      {/* Text are end*/}
+    </div>
   );
 }
+
+export default UserProfile;
