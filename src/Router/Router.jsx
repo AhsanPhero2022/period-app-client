@@ -15,6 +15,7 @@ import Shop from "../components/Shop/Shop";
 import PrivateRoute from "../route/PrivateRout";
 import Cart from "../components/Shop/Cart";
 import ProductDetails from "../components/Shop/ProductDetails";
+import AddProduct from "../components/Shop/AddProduct";
 
 
 
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "shop",
         element: <Shop></Shop>
+      },
+      {
+        path: "addProduct",
+        element: <AddProduct></AddProduct>
       },
       {
         path: "cart",

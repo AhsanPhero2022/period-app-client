@@ -72,6 +72,9 @@ function NavItem() {
             <li>
               <Link to="/shop">Shop</Link>
             </li>
+            <li>
+              <Link to="/addProduct">Add Product</Link>
+            </li>
           </ul>
         </div>
         <div className="navbar-end">

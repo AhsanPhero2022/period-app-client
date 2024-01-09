@@ -41,7 +41,7 @@ function AppointmentDetails() {
     fetch("http://localhost:5000/consultantRequest", {
       method: "POSt",
       headers: {
-        "content-Type": "application/json",
+        "content-Type": "application/json"
       },
       body: JSON.stringify(consultantRequest),
     });
