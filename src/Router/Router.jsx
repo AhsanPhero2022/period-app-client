@@ -16,6 +16,7 @@ import PrivateRoute from "../route/PrivateRout";
 import Cart from "../components/Shop/Cart";
 import ProductDetails from "../components/Shop/ProductDetails";
 import AddProduct from "../components/Shop/AddProduct";
+import SeeConsult from "../components/UserDashboard/ConsulRequest/SeeConsult";
 
 
 
@@ -92,6 +93,10 @@ const router = createBrowserRouter([
       {
         path: 'appointmentDetails/:_id',
         element: <AppointmentDetails></AppointmentDetails>,
+      },
+      {
+        path: 'seeConsult',
+        element: <SeeConsult></SeeConsult>
       }
     ],
   },

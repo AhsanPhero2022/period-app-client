@@ -69,10 +69,10 @@ const UserDashboard = () => {
                 }}
               >
                 <MenuItem
-                  component={<Link to="/dashboard/profile"></Link>}
+                  component={<Link to="/userDashboard/seeConsult"></Link>}
                   icon={<HomeIcon />}
                 >
-                  profile{" "}
+                  Consul Request
                 </MenuItem>
                 <MenuItem icon={<HomeIcon />}>my-ai-tool </MenuItem>
                 <SubMenu label="Home" icon={<HomeIcon />}>

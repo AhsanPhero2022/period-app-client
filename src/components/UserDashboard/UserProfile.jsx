@@ -69,11 +69,11 @@ function UserProfile() {
       </div>
       <div className="flex flex-col justify-center items-center gap-3">
         <div className="">
-          <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-            <div class="col-span-2 text-lg font-bold capitalize rounded-md">
+          <div className="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
+            <div className="col-span-2 text-lg font-bold capitalize rounded-md">
               Hello world
             </div>
-            <div class="col-span-2 rounded-md">
+            <div className="col-span-2 rounded-md">
               Using Lorem ipsum to focus attention on graphic elements in a
               webpage design
             </div>
@@ -81,11 +81,11 @@ function UserProfile() {
         </div>
         <div className="">
           <div className=" ">
-            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-              <div class="col-span-2 text-lg font-bold capitalize rounded-md">
+            <div className="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
+              <div className="col-span-2 text-lg font-bold capitalize rounded-md">
                 Hello world
               </div>
-              <div class="col-span-2 rounded-md">
+              <div className="col-span-2 rounded-md">
                 Using Lorem ipsum to focus attention on graphic elements in a
                 webpage design
               </div>

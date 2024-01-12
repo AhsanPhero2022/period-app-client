@@ -3,16 +3,14 @@ import ShopCard from "./ShopCard";
 
 const Shop = () => {
   const [data, setData] = useState([]);
-  const controller = new AbortController();
-  const signal = controller.signal;
+  
+
 
   useEffect(() => {
-    fetch("http://localhost:5000/allProducts", { signal })
+    fetch("http://localhost:5000/allProducts")
       .then((res) => res.json())
       .then((data) => setData(data));
-    return () => {
-      controller.abort();
-    };
+  
   }, []);
 
   // sorting function
