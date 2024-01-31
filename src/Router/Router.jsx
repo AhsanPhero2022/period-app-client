@@ -17,6 +17,7 @@ import Cart from "../components/Shop/Cart";
 import ProductDetails from "../components/Shop/ProductDetails";
 import AddProduct from "../components/Shop/AddProduct";
 import SeeConsult from "../components/UserDashboard/ConsulRequest/SeeConsult";
+import PostBlog from "../components/UserDashboard/BlogPost/PostBlog";
 
 
 
@@ -97,6 +98,10 @@ const router = createBrowserRouter([
       {
         path: 'seeConsult',
         element: <SeeConsult></SeeConsult>
+      },
+      {
+        path: 'postBlog',
+        element: <PostBlog/>
       }
     ],
   },

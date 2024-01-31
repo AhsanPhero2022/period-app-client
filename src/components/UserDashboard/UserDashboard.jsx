@@ -1,9 +1,11 @@
 /* eslint-disable no-unused-vars */
 import {
+  AdjustmentsHorizontalIcon,
   ArrowLeftEndOnRectangleIcon,
   ArrowLeftIcon,
   ArrowRightIcon,
   HomeIcon,
+  PencilSquareIcon,
 } from "@heroicons/react/24/solid";
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
@@ -70,11 +72,16 @@ const UserDashboard = () => {
               >
                 <MenuItem
                   component={<Link to="/userDashboard/seeConsult"></Link>}
-                  icon={<HomeIcon />}
+                  icon={<AdjustmentsHorizontalIcon />}
                 >
                   Consul Request
                 </MenuItem>
-                <MenuItem>Post a blog</MenuItem>
+                <MenuItem
+                icon={<PencilSquareIcon/>}
+                  component={<Link to="/userDashboard/postBlog"></Link>}
+                >
+                  Post a blog
+                </MenuItem>
                 <SubMenu label="Home" icon={<HomeIcon />}>
                   <MenuItem icon={<HomeIcon />}> submit tool </MenuItem>
                   <MenuItem icon={<HomeIcon />}> submit tool </MenuItem>
@@ -82,15 +89,7 @@ const UserDashboard = () => {
                   <MenuItem icon={<HomeIcon />}> submit tool </MenuItem>
                 </SubMenu>
 
-                <SubMenu icon={<HomeIcon />} label="manager">
-                  <MenuItem icon={<HomeIcon />}> manage tool </MenuItem>
-                  <MenuItem icon={<HomeIcon />}>my-ai-tool </MenuItem>
-                  <MenuItem icon={<HomeIcon />}>my-ai-tool </MenuItem>
-                  <MenuItem>my-ai-tool </MenuItem>
-                  <MenuItem>my-ai-tool </MenuItem>
-                  <MenuItem>my-ai-tool </MenuItem>
-                  <MenuItem>my-ai-tool </MenuItem>
-                </SubMenu>
+               
                 <SubMenu icon={<HomeIcon />} label="admin">
                   <MenuItem
                     component={<Link to="/dashboard/manage-user"></Link>}
