@@ -74,7 +74,7 @@ const UserDashboard = () => {
                 >
                   Consul Request
                 </MenuItem>
-                <MenuItem icon={<HomeIcon />}>my-ai-tool </MenuItem>
+                <MenuItem>Post a blog</MenuItem>
                 <SubMenu label="Home" icon={<HomeIcon />}>
                   <MenuItem icon={<HomeIcon />}> submit tool </MenuItem>
                   <MenuItem icon={<HomeIcon />}> submit tool </MenuItem>
