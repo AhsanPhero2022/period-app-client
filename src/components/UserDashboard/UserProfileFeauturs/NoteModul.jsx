@@ -2,12 +2,12 @@ import Calendar from "./Calendar";
 
 export const NoteModul = () => {
   return (
-    <div>
+    <div >
       <button
-        className="btn btn-success"
+        className="btn text-white btn-success w-full"
         onClick={() => document.getElementById("my_modal_5").showModal()}
       >
-        Add Note
+        Add a note
       </button>
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
