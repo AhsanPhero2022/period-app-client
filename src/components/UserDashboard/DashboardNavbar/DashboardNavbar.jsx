@@ -8,7 +8,7 @@ function DashboardNavbar() {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <nav className="bg-[#db40db] p-4">
+    <nav className="bg-[#ba759a] p-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white font-bold text-xl">Logo</div>
 
@@ -58,14 +58,15 @@ function DashboardNavbar() {
               to="doctorProfile"
               className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4"
             >
-              Consultency
+              Consultancy
             </Link>
-            <a
-              href="#"
-              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500"
+            <Link
+              to="doctorProfile"
+              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4"
             >
-              UpdateInformation
-            </a>
+              Analysis
+            </Link>
+           
           </div>
         </div>
       </div>

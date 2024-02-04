@@ -1,6 +1,7 @@
 import CssBaseline from "@mui/material/CssBaseline";
 import MainFeaturedPost from "./pages/BlogPage/MainFeaturedPost";
-import banner from "../../../public/assets/banner.jpg";
+import banner from "../../../public/assets/banner.png";
+
 
 const mainFeaturedPost = {
   title: "Title of a longer featured blog post",
@@ -12,26 +13,29 @@ const mainFeaturedPost = {
 };
 
 function Home() {
+
+  const backgroundImageUrl = 'https://i.postimg.cc/Fst52HjH/butter-flye.png';
+
+
   return (
     <>
-      <div className="flex gap-4 items-center justify-between">
-        <img className="" src={banner} alt="Loading.." />
-        <div className="space-y-5">
-          <h1>
-            সখী এবং এসময়ের মধ্যে তৈরি যে যে সম্পর্ক আমাদের জীবনে একটি গভীর
-            পরিবর্তন সৃষ্টি করে
+      <div className="flex gap-4 items-center bg-cover bg-center w-full h-[600px]"
+        // style={{ backgroundImage: `url(${require('../assets/your-image.jpg').default})` }}
+        style={{ backgroundImage: `url(${backgroundImageUrl})` }}
+      >
+        <img className="w-1/2 h-full" src={banner} />
+        <div className="  "
+        
+        >
+          <h1 className=" lg:ms-52 text-3xl font-bold text-[#ba759a] ">
+          সখী <br/> অসময়ের সহচর 
           </h1>
-          <p>
-            তার সৌন্দর্য এবং গুরুত্বপূর্ণ বিশেষত্তর করে তুলে ধরে। সখী আমাদের
-            সাথে থাকে তাদের অসংখ্য অভিজ্ঞান এবং ভাবনার সাথে যোগ করে এবং এসময়
-            আমাদের জীবনে এক রঙে রূপান্তর করে। <div />
-            সখী এসময়ের সহচর লেখার মাধ্যমে, আমরা সময়ের মূহূর্তে যা গুড়িয়ে চলেছি
-            তা বোঝার চেষ্টা করি, যাতে আমরা অদৃশ্য অনুভূতি এবং নতুন দিকে চলার
-            জন্য প্রস্তুত হতে পারি।
-          </p>
+         
         </div>
       </div>
+      
       <MainFeaturedPost post={mainFeaturedPost} />
+  
     </>
   );
 }

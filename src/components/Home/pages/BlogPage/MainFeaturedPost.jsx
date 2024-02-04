@@ -15,11 +15,11 @@ function MainFeaturedPost(props) {
         position: 'relative',
         backgroundColor: 'grey.800',
         color: '#fff',
-        mb: 4,
+        
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        backgroundImage: `url(${post.image})`,
+        backgroundImage: `url("https://i.pinimg.com/736x/fc/ab/39/fcab3932f937cd16609507f4b03d6bde.jpg?fbclid=IwAR3nodXeT9DvxiG_RmMmvOswlbae7uRj2Zgb6ekZ9lk2MPgDV1zdNW9Ql6s")`,
       }}
     >
       {/* Increase the priority of the hero background image */}

@@ -14,7 +14,7 @@ function NavItem() {
 
   return (
     <div>
-      <div className="navbar bg-[#e34fe3] text-white">
+      <div className="navbar bg-[#ba759a] text-white">
         <div className="navbar-start">
           <div className="dropdown lg:hidden ">
             <div

@@ -27,7 +27,7 @@ const mainFeaturedPost = {
   title: 'Title of a longer featured blog post',
   description:
     "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-  image: 'https://source.unsplash.com/random?wallpapers',
+  image: 'https://w0.peakpx.com/wallpaper/874/702/HD-wallpaper-sky-blue-cloud-clouds-color-leaves-morning-nature-skyblue-tree.jpg?fbclid=IwAR0APHC_-MugNhw9wy_rF71C6t6ybV-rD7mLYoMY4fyqpr3qDzvL2afyzws',
   imageText: 'main image description',
   linkText: 'Continue reading…',
 };
@@ -58,7 +58,7 @@ export default function Blog() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
-      <Container maxWidth="lg">
+      <Container >
         <Header title="Blog" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />

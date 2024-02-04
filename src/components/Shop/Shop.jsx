@@ -26,8 +26,9 @@ const Shop = () => {
       return a.name.localeCompare(b.name);
     } else if (sortType === "category") {
       return a.category.localeCompare(b.category);
+    } else if (sortType === "price") {
+      return a.price - b.price;
     }
-    // Add more sorting options as needed
     return 0;
   });
 

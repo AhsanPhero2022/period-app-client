@@ -2,9 +2,16 @@ import { PencilSquareIcon } from "@heroicons/react/24/solid";
 import { NoteModul } from './UserProfileFeauturs/NoteModul';
 
 const UserProfile = () => {
+
+  const backgroundImageUrl = 'https://i.postimg.cc/Fst52HjH/butter-flye.png';
+
+  
   return (
-    <div>
-      <div className="grid  lg:grid-cols-12 gap-4 p-14 bg-[#9adeeb]">
+    <div
+    className="w-full h-screen bg-cover bg-center"
+    style={{ backgroundImage: `url(${backgroundImageUrl})` }}
+    >
+      <div className="grid  lg:grid-cols-12 gap-4 p-14 ">
         <div className="w-full py-4 relative lg:col-span-4 mx-auto rounded-lg bg-white px-12">
           <div className="absolute top-3 left-4">
             <PencilSquareIcon className="w-6 h-6 " />
