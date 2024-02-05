@@ -9,8 +9,9 @@ function App() {
   return (
     <>
       <NavItem></NavItem>
-      
+      <div className="min-h-[560px]">
       <Outlet></Outlet>
+      </div>
       <Footer></Footer>
     </>
   );

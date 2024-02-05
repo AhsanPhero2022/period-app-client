@@ -10,7 +10,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className=" container mx-auto mt-8 min-h-screen">
+    <div className=" container mx-auto mt-8 ">
       <h1 className="text-3xl font-bold mb-4">About Us</h1>
       <p className="mb-6 text-xl">
       Hello and welcome to Shokhi, your go-to destination for seamless and personalized menstrual cycle tracking

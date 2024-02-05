@@ -8,11 +8,11 @@ const UserProfile = () => {
   
   return (
     <div
-    className="w-full h-screen bg-cover bg-center"
+    className="w-full h-full  bg-cover bg-center"
     style={{ backgroundImage: `url(${backgroundImageUrl})` }}
     >
-      <div className="grid  lg:grid-cols-12 gap-4 p-14 ">
-        <div className="w-full py-4 relative lg:col-span-4 mx-auto rounded-lg bg-white px-12">
+      <div className="grid  lg:grid-cols-12 gap-4 lg:p-14 ">
+        <div className="w-full py-4 relative lg:col-span-4 mx-auto lg:mt-16 rounded-lg bg-gray-300 px-12">
           <div className="absolute top-3 left-4">
             <PencilSquareIcon className="w-6 h-6 " />
           </div>
@@ -26,7 +26,7 @@ const UserProfile = () => {
             <NoteModul/>
           </div>
         </div>
-        <div className=" lg:col-span-8 bg-white rounded-lg">
+        <div className="lg:mt-16 lg:col-span-8 bg-gray-300 rounded-lg">
           <div className="p-4 space-y-3">
             <h1 className="font-bold text-3xl">Generale Information</h1>
             <div className="overflow-x-auto">

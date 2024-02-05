@@ -28,7 +28,9 @@ const UserDashboard = () => {
         <div className="drawer-content flex flex-col  ">
           {/* Page content here */}
           <DashboardNavbar></DashboardNavbar>
+          <div className="min-h-[590px]">
           <Outlet></Outlet>
+          </div>
           <Footer></Footer>
           <label
             htmlFor="my-drawer-2"
