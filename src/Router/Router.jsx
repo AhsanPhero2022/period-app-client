@@ -18,6 +18,7 @@ import ProductDetails from "../components/Shop/ProductDetails";
 import AddProduct from "../components/Shop/AddProduct";
 import SeeConsult from "../components/UserDashboard/ConsulRequest/SeeConsult";
 import PostBlog from "../components/UserDashboard/BlogPost/PostBlog";
+import Analysis from "../components/UserDashboard/Features/PeriodTracker/Analysis";
 
 
 
@@ -102,6 +103,10 @@ const router = createBrowserRouter([
       {
         path: 'postBlog',
         element: <PostBlog/>
+      },
+      {
+        path: 'analysis',
+        element: <Analysis/>
       }
     ],
   },

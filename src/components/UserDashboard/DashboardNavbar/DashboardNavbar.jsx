@@ -61,7 +61,7 @@ function DashboardNavbar() {
               Consultancy
             </Link>
             <Link
-              to="doctorProfile"
+              to="analysis"
               className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4"
             >
               Analysis

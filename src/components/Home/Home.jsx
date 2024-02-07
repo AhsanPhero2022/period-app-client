@@ -1,6 +1,7 @@
 import CssBaseline from "@mui/material/CssBaseline";
 import MainFeaturedPost from "./pages/BlogPage/MainFeaturedPost";
 import banner from "../../../public/assets/banner.png";
+import Banner from "./Banner";
 
 
 const mainFeaturedPost = {
@@ -35,7 +36,7 @@ function Home() {
       </div>
       
       <MainFeaturedPost post={mainFeaturedPost} />
-  
+  <Banner/>
     </>
   );
 }
